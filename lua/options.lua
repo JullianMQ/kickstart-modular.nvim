@@ -8,6 +8,13 @@ vim.opt.termguicolors = true
 vim.cmd 'set wildmenu'
 vim.cmd 'set wildmode=list:longest'
 vim.o.wildignore = '*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx,*.git,~/*,*.zip'
+vim.g.autoformat = false
+
+vim.g.netrw_bufsettings = 'noma nomod nu nowrap ro nobl'
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = 'netrw',
+  command = 'setlocal number',
+})
 
 -- Don't show the mode, since it's already in the status line
 vim.opt.showmode = false

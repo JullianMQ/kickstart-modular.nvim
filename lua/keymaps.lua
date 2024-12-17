@@ -56,6 +56,7 @@ keymap.set('n', 'yae', ':% y<CR>', { noremap = true, silent = true, desc = 'Yank
 keymap.set('n', '<leader>yae', ':% y+"<CR>', { noremap = true, silent = true, desc = 'Yank all' })
 -- keymap.set('n', '<leader>so', ':source ~/.config/nvim/init.lua<CR>', { noremap = true, silent = true, desc = 'Source main config file' })
 keymap.set('n', '<leader>so', ':source<CR>', { noremap = true, silent = true, desc = 'Source config file' })
+-- keymap.set('n', '-', ':Ex<CR>', { noremap = true, silent = true, desc = 'Open file explorer' })
 
 -- Escape insert mode
 keymap.set('i', 'jj', '<ESC>', { noremap = true, silent = true })
@@ -96,8 +97,8 @@ keymap.set('n', '<leader>bda', ':bp|%bd<CR>', { noremap = true, silent = true, d
 keymap.set('n', '<leader>bde', ':%bd|e #|bd #<CR>', { noremap = true, silent = true, desc = 'Buffer delete all except current' })
 -- delete all buffers except current
 
-keymap.set('n', '<leader>o', 'o<ESC>', { noremap = true, silent = true })
-keymap.set('n', '<leader>O', 'O<ESC>', { noremap = true, silent = true })
+keymap.set('n', '<leader>o', 'o<ESC>', { noremap = true, silent = true, desc = 'Add line below' })
+keymap.set('n', '<leader>O', 'O<ESC>', { noremap = true, silent = true, desc = 'Add line above' })
 
 -- Navigate buffers
 keymap.set('n', '<leader>h', ':bn<CR>', { noremap = true, silent = true, desc = 'Go to next buffer' })
@@ -127,13 +128,13 @@ vim.keymap.set('n', 'gdf', ':Git diff ', { desc = ' Git diff' })
 vim.keymap.set('n', 'gdv', ':Gvdiffsplit!<CR>', { desc = ' Git diff vertical split three way' })
 
 -- Screenkey
-keymap.set('n', '<leader>tsk', ':Screenkey<CR>', { desc = '[T]oggle [S]creen[K]ey' })
+-- keymap.set('n', '<leader>tsk', ':Screenkey<CR>', { desc = '[T]oggle [S]creen[K]ey' })
 
 -- UndoTree
 keymap.set('n', 'gu', ':UndotreeToggle<CR>', { desc = 'Show Undotree' })
 
 -- Bufferlist
-keymap.set('n', '<leader>e', ':BufferList<CR>', { desc = 'Show Bufferlist' })
+-- keymap.set('n', '<leader>e', ':BufferList<CR>', { desc = 'Show Bufferlist' })
 
 -- Vim Tmux Keybinds
 -- keymap.set('n', '<C-h>', ':TmuxNavigateLeft<cr>', { silent = true, desc = 'window left' })

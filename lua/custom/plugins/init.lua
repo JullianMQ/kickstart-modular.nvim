@@ -1,16 +1,5 @@
 return {
 
-  -- Oil nvim
-  {
-    'stevearc/oil.nvim',
-    ---@module 'oil'
-    ---@type oil.SetupOpts
-    opts = {
-      vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' }),
-    },
-    dependencies = { { 'echasnovski/mini.icons', opts = {} } },
-  },
-
   -- Tpope Plugins
   {
     'tpope/vim-fugitive',
@@ -150,6 +139,17 @@ return {
   },
 
   -- Stevearc plugins
+  -- Oil nvim
+  {
+    'stevearc/oil.nvim',
+    ---@module 'oil'
+    ---@type oil.SetupOpts
+    opts = {
+      vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' }),
+    },
+    dependencies = { { 'echasnovski/mini.icons', opts = {} } },
+  },
+
   -- Quicker quickfix list
   {
     'stevearc/quicker.nvim',
@@ -228,5 +228,13 @@ return {
       vim.g.mkdp_command_for_global = 0
     end,
     ft = { 'markdown', 'html' },
+  },
+
+  -- Supermaven
+  {
+    'supermaven-inc/supermaven-nvim',
+    config = function()
+      require('supermaven-nvim').setup {}
+    end,
   },
 }

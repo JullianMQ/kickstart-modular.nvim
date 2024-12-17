@@ -17,6 +17,21 @@ return {
   { -- Useful plugin to show you pending keybinds.
     'folke/which-key.nvim',
     event = 'VimEnter', -- Sets the loading event to 'VimEnter'
+    config = function ()
+      local wk = require('which-key')
+      wk.add ({
+        {"<leader>a", desc = 'Harpoon [A]dd'},
+        {"<leader>h", desc = '[H]arpoon Menu'},
+        {"<leader>b", desc = '[B]uffer +'},
+        {"<leader>bd", desc = '[B]uffer [D]elete +'},
+        {"<leader>bde", desc = '[B]uffer [D]elete [E]xcept Current'},
+        {"<leader>bda", desc = '[B]uffer [D]elete [A]ll'},
+        {"<leader>bds", desc = '[B]uffer [D]elete [S]afe'},
+        {"<leader>bdf", desc = '[B]uffer [D]elete [F]orce'},
+        {"<leader>c", desc = '[C]ode +'},
+        {"<leader>d", desc = '[D]ocument +'},
+      })
+    end,
     opts = {
       icons = {
         -- set icon mappings to true if you have a Nerd Font
@@ -63,6 +78,7 @@ return {
         { '<leader>s', group = '[S]earch' },
         { '<leader>w', group = '[W]orkspace' },
         { '<leader>t', group = '[T]oggle' },
+        { '<leader>b', group = '[B]uffer' },
         { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
       },
     },

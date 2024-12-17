@@ -16,6 +16,14 @@ return {
   {
     -- Main LSP Configuration
     'neovim/nvim-lspconfig',
+    opts = {
+      inlay_hints = { enabled = true },
+      autoformat = false,
+      format = {
+        formatting_options = nil,
+        timeout_ms = nil,
+      },
+    },
     dependencies = {
       -- Automatically install LSPs and related tools to stdpath for Neovim
       { 'williamboman/mason.nvim', config = true }, -- NOTE: Must be loaded before dependants
@@ -67,7 +75,6 @@ return {
           -- Fuzzy find all the symbols in your current workspace.
           --  Similar to document symbols, except searches over your entire project.
           map('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
-
           -- Rename the variable under your cursor.
           --  Most Language Servers support renaming across files, etc.
           map('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
@@ -157,6 +164,7 @@ return {
         cssls = {},
         cssmodules_ls = {},
         css_variables = {},
+        jdtls = {},
         -- rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
@@ -164,7 +172,7 @@ return {
         --    https://github.com/pmizio/typescript-tools.nvim
         --
         -- But for many setups, the LSP (`ts_ls`) will work just fine
-        ts_ls = {},
+        ts_ls = { },
 
         lua_ls = {
           -- cmd = {...},
@@ -221,6 +229,12 @@ return {
           end,
           ['ts_ls'] = function()
             require('lspconfig').ts_ls.setup {
+              filetypes = {
+                "javascript",
+                "javascriptreact",
+                "typescript",
+                "typescriptreact",
+              },
               -- handlers = {
               --     ["textDocument/publishDiagnostics"] = function(
               --         _,
