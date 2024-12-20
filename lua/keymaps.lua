@@ -56,7 +56,7 @@ keymap.set('n', 'yae', ':% y<CR>', { noremap = true, silent = true, desc = 'Yank
 keymap.set('n', '<leader>yae', ':% y+"<CR>', { noremap = true, silent = true, desc = 'Yank all' })
 -- keymap.set('n', '<leader>so', ':source ~/.config/nvim/init.lua<CR>', { noremap = true, silent = true, desc = 'Source main config file' })
 keymap.set('n', '<leader>so', ':source<CR>', { noremap = true, silent = true, desc = 'Source config file' })
-keymap.set('n', '-', ':Ex<CR>', { noremap = true, silent = true, desc = 'Open file explorer' })
+keymap.set('n', '-', ':Vex<CR>', { noremap = true, silent = true, desc = 'Open file explorer' })
 
 -- Escape insert mode
 keymap.set('i', 'jj', '<ESC>', { noremap = true, silent = true })
@@ -87,14 +87,15 @@ keymap.set('n', 'n', 'nzz', { noremap = true, silent = true })
 keymap.set('n', 'N', 'Nzz', { noremap = true, silent = true })
 
 -- Buffer deletion, added the bp bar for it not to affect the window splits
-keymap.set('n', '<leader>bds', ':bp|bd #<CR>', { noremap = true, silent = true, desc = 'Buffer delete safe' })
--- buffer delete safe
-keymap.set('n', '<leader>bdf', ':bp|bd! #<CR>', { noremap = true, silent = true, desc = 'Buffer delete force' })
--- buffer delete force
-keymap.set('n', '<leader>bda', ':bp|%bd<CR>', { noremap = true, silent = true, desc = 'Buffer delete all' })
--- delete all buffers
--- keymap.set("n", "<leader>bde", ":bp|%bd|e #|bd #<CR>", { noremap = true, silent = true, desc="Buffer delete all except current" })
-keymap.set('n', '<leader>bde', ':%bd|e #|bd #<CR>', { noremap = true, silent = true, desc = 'Buffer delete all except current' })
+-- buffer delete window
+keymap.set('n', '<leader>bds', ':bp|bd #<CR>', { noremap = true, silent = true, desc = '[B]uffer [D]elete [S]afe' })
+-- buffer [D]elete safe
+keymap.set('n', '<leader>bdf', ':bp|bd! #<CR>', { noremap = true, silent = true, desc = '[B]uffer [D]elete [F]orce' })
+-- buffer [D]elete force
+keymap.set('n', '<leader>bda', ':bp|%bd<CR>', { noremap = true, silent = true, desc = '[B]uffer [D]elete [A]ll' })
+-- [D]elete all buffers
+-- keymap.set("n", "<leader>bde", ":bp|%bd|e #|bd #<CR>", { noremap = true, silent = true, desc="[B]uffer [D]elete all except current" })
+keymap.set('n', '<leader>bde', ':%bd|e #|bd #<CR>', { noremap = true, silent = true, desc = '[B]uffer [D]elete all [E]xcept current' })
 -- delete all buffers except current
 
 keymap.set('n', '<leader>o', 'o<ESC>', { noremap = true, silent = true, desc = 'Add line below' })
