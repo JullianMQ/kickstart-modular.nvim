@@ -56,7 +56,7 @@ keymap.set('n', 'yae', ':% y<CR>', { noremap = true, silent = true, desc = 'Yank
 keymap.set('n', '<leader>yae', ':% y+"<CR>', { noremap = true, silent = true, desc = 'Yank all' })
 -- keymap.set('n', '<leader>so', ':source ~/.config/nvim/init.lua<CR>', { noremap = true, silent = true, desc = 'Source main config file' })
 keymap.set('n', '<leader>so', ':source<CR>', { noremap = true, silent = true, desc = 'Source config file' })
-keymap.set('n', '-', ':Vex<CR>', { noremap = true, silent = true, desc = 'Open file explorer' })
+-- keymap.set('n', '-', ':Ex<CR>', { noremap = true, silent = true, desc = 'Open file explorer' })
 
 -- Escape insert mode
 keymap.set('i', 'jj', '<ESC>', { noremap = true, silent = true })
