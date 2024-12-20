@@ -7,7 +7,6 @@ project.
 
 ## Added the following plugins:
 
-
 ### Tpope plugins
 - vim-obsession
 - vim-fugitive

@@ -56,7 +56,7 @@ keymap.set('n', 'yae', ':% y<CR>', { noremap = true, silent = true, desc = 'Yank
 keymap.set('n', '<leader>yae', ':% y+"<CR>', { noremap = true, silent = true, desc = 'Yank all' })
 -- keymap.set('n', '<leader>so', ':source ~/.config/nvim/init.lua<CR>', { noremap = true, silent = true, desc = 'Source main config file' })
 keymap.set('n', '<leader>so', ':source<CR>', { noremap = true, silent = true, desc = 'Source config file' })
--- keymap.set('n', '-', ':Ex<CR>', { noremap = true, silent = true, desc = 'Open file explorer' })
+keymap.set('n', '-', ':Ex<CR>', { noremap = true, silent = true, desc = 'Open file explorer' })
 
 -- Escape insert mode
 keymap.set('i', 'jj', '<ESC>', { noremap = true, silent = true })
@@ -119,13 +119,13 @@ keymap.set('n', 'gd', ':vs<CR><C-w>l<C-]>', { desc = 'open documentation on righ
 keymap.set('n', '<C-]>', ':vs<CR><C-w>l<C-]>', { desc = 'open documentation on right split' })
 
 -- Git Fugitive Stuff
-vim.keymap.set('n', 'gpu', ':Git push ', { desc = 'Git push' })
-vim.keymap.set('n', 'gpl', ':Git pull ', { desc = 'Git pull' })
+keymap.set('n', '<leader>gp', ':Git push ', { desc = '[G]it push' })
+keymap.set('n', '<leader>gl', ':Git pull ', { desc = '[G]it pull' })
 
-vim.keymap.set('n', 'gcm', ':Git commit -m ""', { desc = 'Git commit' })
-vim.keymap.set('n', 'gaf', ':Git add ', { desc = ' Git add' })
-vim.keymap.set('n', 'gdf', ':Git diff ', { desc = ' Git diff' })
-vim.keymap.set('n', 'gdv', ':Gvdiffsplit!<CR>', { desc = ' Git diff vertical split three way' })
+keymap.set('n', '<leader>gm', ':Git commit -m ""', { desc = '[G]it commit' })
+keymap.set('n', '<leader>ga', ':Git add ', { desc = ' [G]it add' })
+keymap.set('n', '<leader>gd', ':Git diff ', { desc = ' [G]it diff' })
+keymap.set('n', '<leader>gv', ':Gvdiffsplit!<CR>', { desc = ' [G]it diff vertical split three way' })
 
 -- Screenkey
 -- keymap.set('n', '<leader>tsk', ':Screenkey<CR>', { desc = '[T]oggle [S]creen[K]ey' })

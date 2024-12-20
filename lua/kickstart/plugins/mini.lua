@@ -33,8 +33,8 @@ return {
       end
 
       -- File explorer
-      require('mini.files').setup()
-      vim.keymap.set('n', '-', ':lua MiniFiles.open()<CR>')
+      -- require('mini.files').setup()
+      -- vim.keymap.set('n', '-', ':lua MiniFiles.open()<CR>')
 
       -- SplitJoin gS, toggle arguments inside brackets
       require('mini.splitjoin').setup()
